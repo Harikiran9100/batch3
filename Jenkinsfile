@@ -15,6 +15,7 @@ pipeline {
                     println "my parameter value is ${params.env}"
                     // working with environment variables
                     println "my environment variable value is ${env.JAVA_VERSION}"
+                    sh "java -version"
                 }
             }
         }
