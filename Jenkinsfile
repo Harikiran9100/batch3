@@ -1,21 +1,16 @@
 pipeline {
     agent any
-    parameters {
-    choice choices: ['prod', 'dev', 'sit', 'pt'], description: 'select an one environment', name: 'env'
-    }
-    environment {
-    JAVA_VERSION = "11.0.8"
-    }
     stages {
-        stage('working with git clone'){
+        stage('working with conditions'){
             steps{
                 script{
-                    println "Hii team im groovy scripting"
-                    // working with parameters
-                    println "my parameter value is ${params.env}"
-                    // working with environment variables
-                    println "my environment variable value is ${env.JAVA_VERSION}"
-                    sh "ls -l"
+                    myvalue = 20
+                    if (myvalue == 20) {
+                        println "value is correct"
+                    }
+                    else{
+                        println "value is in-correct"
+                    }
                 }
             }
         }
