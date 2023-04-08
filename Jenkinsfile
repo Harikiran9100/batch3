@@ -4,7 +4,7 @@ pipeline {
         stage('working with conditions'){
             steps{
                 script{
-                    myvalue = 20
+                    input message: '', parameters: [string(name: 'myvalue', trim: true)]
                     if (myvalue == 20) {
                         println "value is correct"
                     }
