@@ -5,7 +5,7 @@ pipeline {
             steps{
                 script{
                     myvalue = input message: '', parameters: [string(name: 'myvalue', trim: true)]
-                    if (myvalue == 20) {
+                    if (myvalue.toInteger() == 20) {
                         println "value is correct"
                     }
                     else{
