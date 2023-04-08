@@ -1,4 +1,4 @@
-pipline {
+pipeline {
     agent any
     stages {
         stage('working with git clone'){
