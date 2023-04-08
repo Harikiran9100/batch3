@@ -8,6 +8,8 @@ pipeline {
             steps{
                 script{
                     println "Hii team im groovy scripting"
+                    
+                    println "my parameter value is ${params.env}"
                 }
             }
         }
